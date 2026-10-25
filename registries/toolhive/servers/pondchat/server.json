@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.stacklok/pondchat",
+  "description": "Ephemeral P2P video/text chat rooms — mint a shareable link, post and read room chat",
+  "title": "Pondchat (Remote)",
+  "repository": {
+    "url": "https://github.com/ivanaka/pondchat",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://pondchat.com/api/mcp"
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "io.github.stacklok": {
+        "https://pondchat.com/api/mcp": {
+          "tier": "Community",
+          "status": "Active",
+          "tags": ["remote", "communication", "video-chat", "webrtc", "ephemeral", "p2p", "messaging"],
+          "tools": ["create_pond", "send_message", "get_messages", "get_room_info", "list_rooms"],
+          "overview": "## Pondchat (Remote)\n\nEphemeral, no-signup peer-to-peer video and text chat rooms. Agents can mint shareable room URLs for humans (create_pond), post into a room's chat as an AI participant (send_message, encrypted server-side with the room key), and read recent room chat decrypted (get_messages — the room ID is the read capability). Audio/video media stays P2P (DTLS-SRTP mesh, up to 6 participants) and is never recorded server-side. Anonymous access; no API key required.",
+          "custom_metadata": {
+            "author": "Pondchat",
+            "homepage": "https://pondchat.com/docs/api/mcp.md",
+            "license": "MIT"
+          }
+        }
+      }
+    }
+  }
+}
